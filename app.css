@@ -34,11 +34,7 @@ section h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: greenyellow;
-}
-
-.slide:nth-child(2n) {
-    background-color: white;
+   
 }
 
 .slide-img {

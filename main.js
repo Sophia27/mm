@@ -32,13 +32,13 @@ const addMovement = function () {
     
     
     
-    let rotation = distanceToSection / 100
+    // let rotation = distanceToSection / 100
     let width = distanceToSection / 10
    
     
     
   
-    image.style.transform = `rotate(${rotation}deg)`
+    // image.style.transform = `rotate(${rotation}deg)`
     image.style.width =  `${width}%`
     
   })

@@ -60,7 +60,11 @@ div.client {
 
   nav {
     position: fixed;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    float: left;
     height: 12px;
     font-size: 12px;
     line-height: 0;
@@ -72,9 +76,9 @@ div.client {
   }
 
   nav a {
-    top: 4px;
-    position: relative;
-    width: 33%;
+   padding: 10px;
+
+   
   }
 
   div.progress {

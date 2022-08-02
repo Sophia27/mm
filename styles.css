@@ -378,8 +378,8 @@ div.client-title {
 
 div.client {
   position:  block;
-  top: 20px;
-  margin: 20px 0px 0px 160px;
+  /* top: 20px;
+  margin: 20px 0px 0px 160px; */
   font-size: var(--m);
   z-index: 9; 
 }
@@ -388,7 +388,7 @@ div.client-title span img {
   display: block;
   width: auto;
   height: 25px;
-  transform: translate(10px, 17px);
+  transform: translate(10px, -2px);
 }
 
 a.teaser-container:hover  div.client-title span img{

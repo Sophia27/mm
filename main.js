@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 const bodyTag = document.querySelector("body")
 const sections = document.querySelectorAll(".teaser-container")
 const titleTag = document.querySelector("div.client")
@@ -10,6 +14,7 @@ document.addEventListener("scroll", function () {
   sections.forEach(section => {
     if (section.offsetTop - 60 <= pixels) {
       //const title = document.querySelector(".title")
+
       titleTag.innerHTML = section.getAttribute("data-client")
 
     }

@@ -322,7 +322,7 @@ footer {
 
 .teaser-img.contain {
   object-fit: contain;
-  width: 50%;
+  width: 60vmin;
   height: auto;
   transform: scale(0, 0);
   transition: transform 600ms;
@@ -367,13 +367,32 @@ footer {
     object-fit: cover;
 } */
 
+div.client-title {
+  position:  sticky;
+  top: 20px;
+  margin: 20px 0px 0px 160px;
+  z-index: 9; 
+  display: flex;
+  flex-direction: row;
+}
 
 div.client {
-  position:  sticky;
+  position:  block;
   top: 20px;
   margin: 20px 0px 0px 160px;
   font-size: var(--m);
   z-index: 9; 
+}
+
+div.client-title span img {
+  display: block;
+  width: auto;
+  height: 25px;
+  transform: translate(10px, 17px);
+}
+
+a.teaser-container:hover  div.client-title span img{
+display: block;
 }
 
 .titel {
@@ -381,8 +400,7 @@ div.client {
 }
 
 .space {
-  width: 100vw;
-  height: 90vh;
+  height: 10px;
 }
 
 /* --------- Navigation--------*/
@@ -427,8 +445,23 @@ div.progress {
 div.projekt-liste, div.information {
   position: relative;
   /* top: 0px; */
-  margin: 5vh auto 0;
+  margin: 5vh auto 0 auto;
   max-width: 100%;
+}
+
+div.information p , div.information-links{
+  padding: 0 10px;
+  text-indent: 75px;
+}
+
+div.information p:first-child {
+  text-indent: 0px;
+}
+
+
+
+div.information-links h3 {
+  line-height: 175%;
 }
 
 .projekt {

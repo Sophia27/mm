@@ -42,7 +42,9 @@
 }
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 body {
@@ -62,13 +64,13 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0;
-    
 
 }
 
 .margin {
   margin-left: 20px;
 }
+
 
 ul, li, dt, dl, dd {
     margin: 0;
@@ -176,9 +178,6 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 10; 
- 
-  /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-left)
-    env(safe-area-inset-bottom); */
   }
 
   .overlay-news {
@@ -285,58 +284,150 @@ footer {
     justify-content: center;
 }
 
-  
+/* --------- Teasers ---------*/
 
-
-/* --------- Hero Section --------*/
-
-  .intro {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items:  center;
-    z-index: 1;
-  }
-
-.hide {
-  display: none;
-  z-index:-100;
+.title {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  font-size: 16px;
 }
-  
-.blur {
-    filter: blur(4px);
-  }
+/* Alle Teaser */
+.teasers-container{
+  position: relative;
+  top: -20px;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+}
+/* Single */
+.teaser-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-.intro .browser {
-    transform: translateY(-10%);
-    width: 95%;
-    height: auto;
-    margin: 0 auto;
-  }
+.teaser-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-.intro .mobile {
-  height: calc(90% - 60px);
-  width: auto;  
-  margin: 0 auto;
- }
+.teaser-img.contain {
+  object-fit: contain;
+  width: 50%;
+  height: auto;
+  transform: scale(0, 0);
+  transition: transform 600ms;
+  transform-origin: 50% 100vh;
+}
 
-.mobile {
-  display: none;
+.teaser-img.contain.scaled, .teaser-img.cover.scaled  {
+  transform: scale(1, 1) !important;
+}
+
+.teaser-img.cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 0);
+  transition: transform 600ms;
+  transform-origin: 50% 100vh;
+}
+
+.teaser-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  object-fit: contain;
+}
+
+
+/* 
+
+.responsive-video video {
+   
+    top: 50%;
+    left: 50%;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+} */
+
+
+div.client {
+  position:  sticky;
+  top: 20px;
+  margin: 20px 0px 0px 160px;
+  font-size: var(--m);
+  z-index: 9; 
+}
+
+.titel {
+    display: none;
+}
+
+.space {
+  width: 100vw;
+  height: 90vh;
+}
+
+/* --------- Navigation--------*/
+
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  float: left;
+  font-size: 12px;
+  height: 15px;
+  line-height: 0;
+  width: 100vw;
+  background-color: transparent;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+nav a {
+ padding: 10px;
+}
+
+/* --------- Progress Bar --------*/
+
+div.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 15px;
+  background-color: var(--green);
+  width: 0;
+  z-index: 9;
 }
 
 
 
 /* --------- Projekt-Liste --------*/
 
-div.projekt-liste {
+div.projekt-liste, div.information {
   position: relative;
-  top: 0px;
-  margin: 0 auto;
+  /* top: 0px; */
+  margin: 5vh auto 0;
   max-width: 100%;
 }
 
@@ -381,7 +472,6 @@ div.projekt-liste {
   flex-direction: row;
   justify-content: flex-start;
 }
-
 
 .jahr {
 padding: 0;
@@ -503,6 +593,7 @@ display: none;
   padding-right: 20px;
   }
 
+
 /* --------- Impressum --------*/
 .impressum {
   top: 30px;
@@ -513,8 +604,6 @@ display: none;
 
 @media only screen and (min-width: 768px) and (max-width: 1023px)
 {
-
-
   .col-0 {
   width: 15%;
   }

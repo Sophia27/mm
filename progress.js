@@ -1,5 +1,4 @@
 const progressTag = document.querySelector ("div.progress")
-const bodyTag = document.querySelector ("body")
 
 document.addEventListener("scroll", function () {
  const pixels = window.pageYOffset
@@ -14,12 +13,8 @@ document.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
-   
-
-    /******************************* Height of Impressum ******************************/
     let bodyHeight = bodyTag.clientHeight;
-    let neuTag = document.querySelector("div.liste")
+    let neuTag = document.querySelector("div.neu")
     let neuHeight = neuTag.clientHeight;
     let neuWidth = neuHeight / bodyHeight * 100
 
@@ -27,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let indexHeight = indexTag.clientHeight;
     let indexWidth = indexHeight / bodyHeight * 100
 
-    let infoTag = document.querySelector("div.liste")
+    let infoTag = document.querySelector("div.information")
     let infoHeight = infoTag.clientHeight;
     let infoWidth = infoHeight / bodyHeight * 100
     

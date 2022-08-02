@@ -43,9 +43,9 @@ section h2 {
 
 
 div.client {
-    position:  fixed;
+    position:  sticky;
     top: 20px;
-    left:  160px;
+    margin: 20px 0px 0px 160px;
     font-size: var(--m);
   }
   

@@ -35,12 +35,11 @@ const addMovement = function () {
     const distanceToSection = midViewport - midSection
     
     // pick the tags to parallax
-    const image = section.querySelector("img")
-
+    const image = section.querySelector(".teaser")
     
-   
     if (distanceToSection > -500) {
       image.classList.add("scaled");
+   
     } else {
       image.classList.remove("scaled");
     }
